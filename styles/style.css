@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+	box-sizing: border-box;
+	font-family: "Lato", sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.bubles {
+	position: fixed;
+	display: flex;
+	z-index: -100;
+}
+
+.bubles span {
+	position: relative;
+	width: 500px;
+	height: 500px;
+	background-color: #e5e5e5;
+	border-radius: 50%;
+	animation: animate 20s linear infinite;
+	animation-duration: calc(350s / var(--i));
+}
+
+.bubles span:nth-child(odd) {
+	border: hsl(247.17deg, 64.37%, 48.43%) solid 20px;
+	background-color: transparent;
+	width: 150px;
+	height: 150px;
+}
+
+.bubles span:nth-child(2) {
+	background-color: hsl(270.94deg, 56.14%, 44.71%);
+	width: 350px;
+	height: 350px;
+}
+
+.bubles span:last-child {
+	background-color: hsl(270.94deg, 56.14%, 44.71%);
+	width: 350px;
+	height: 350px;
+	border: none;
+}
+
+@keyframes animate {
+	0% {
+		transform: translateY(100vh) scale(0);
+	}
+	50% {
+		transform: translateY(-10vh) scale(1);
+	}
+	100% {
+		transform: translateY(100vh) scale(0);
+	}
+}
+
+section {
+	background-color: #fff;
+	max-width: 1000px;
+	box-shadow: 5px 5px 20px rgba(229, 229, 229, 0.7);
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.logo {
+	margin-right: 400px;
+}
+
+.logo img {
+	width: 55px;
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 10px;
+	padding: 20px;
+}
+
+a {
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: hsl(0deg, 0%, 39.61%);
+	transition: transform 0.3s;
+}
+
+a:hover {
+	text-decoration: underline hsl(296.18deg, 100%, 43.14%) 3px;
+	transform: scale(1.1);
+}
+
+a:active {
+	color: hsl(259.72deg, 69.76%, 59.8%);
+	text-decoration: underline hsl(259.72deg, 69.76%, 59.8%) 3px;
+}
+
+.left {
+	flex: 50%;
+	background-color: #ffffff;
+	margin-left: 20px;
+	margin-bottom: 80px;
+}
+
+.right {
+	flex: 50%;
+	margin-right: 20px;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+p {
+	font-size: 14px;
+	color: hsl(0deg, 0%, 39.61%);
+}
+button {
+	color: white;
+	background-color: hsl(259.72deg, 69.76%, 59.8%);
+	padding: 12px 50px;
+	border: none;
+	border-radius: 100px;
+}
+
+button:hover {
+	background-color: hsl(296.18deg, 100%, 43.14%);
+	color: #fff;
+}
+
+button:active {
+	transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+	section {
+		padding: 20px;
+	}
+
+	.content {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.logo {
+		margin-right: 0;
+	}
+
+	.left {
+		margin-left: 0;
+	}
+
+	.right {
+		margin-right: 0;
+	}
+}
