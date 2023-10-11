@@ -195,7 +195,20 @@ button:active {
 	}
 
 	.right {
-		margin-right: 0;
+		margin: 0 5px;
+		max-width: 400px;
+	}
+
+	.right h1 {
+		font-size: 1.5em;
+	}
+
+	.right p {
+		font-size: 12px;
+	}
+
+	button {
+		padding: 10px 45px;
 	}
 }
 
