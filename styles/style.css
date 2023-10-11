@@ -187,17 +187,7 @@ button:active {
 	}
 
 	nav {
-		margin-top: 40px;
 		visibility: hidden;
-	}
-	.logo {
-		margin-right: 0;
-		visibility: visible;
-	}
-
-	.logo img {
-		width: 30px;
-		border-radius: 10px;
 	}
 
 	.left {
