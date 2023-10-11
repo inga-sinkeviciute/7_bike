@@ -119,15 +119,16 @@ a:active {
 }
 
 .left {
-	flex: 50%;
-	background-color: #ffffff;
-	margin-left: 20px;
-	margin-bottom: 80px;
+	flex: 60%;
+	margin-bottom: 50px;
 }
 
+.left img {
+	width: 85%;
+}
 .right {
-	flex: 50%;
-	margin-right: 20px;
+	flex: 40%;
+	margin-right: 30px;
 }
 
 h1 {
@@ -140,19 +141,28 @@ p {
 }
 button {
 	color: white;
+	text-transform: uppercase;
 	background-color: hsl(259.72deg, 69.76%, 59.8%);
-	padding: 12px 50px;
+	margin: 8px 0;
+	padding: 16px 60px;
 	border: none;
 	border-radius: 100px;
+	transition: transform 0.3s;
 }
 
 button:hover {
 	background-color: hsl(296.18deg, 100%, 43.14%);
 	color: #fff;
+	transform: scale(1.1);
 }
 
 button:active {
-	transform: translateY(1px);
+	transform: translateY(5px);
+}
+@media (max-width: 950px) {
+	.styled-break {
+		visibility: hidden;
+	}
 }
 
 @media (max-width: 768px) {
@@ -176,4 +186,12 @@ button:active {
 	.right {
 		margin-right: 0;
 	}
+}
+
+.styled-break {
+	width: 70px;
+	height: 4px;
+	border-radius: 2.5px;
+	margin-top: 50px;
+	background-color: black;
 }
