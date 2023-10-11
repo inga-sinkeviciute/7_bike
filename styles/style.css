@@ -196,7 +196,8 @@ button:active {
 	}
 
 	.logo img {
-		border-radius: 20px;
+		width: 30px;
+		border-radius: 10px;
 	}
 
 	.left {
